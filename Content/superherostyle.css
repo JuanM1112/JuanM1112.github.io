@@ -1,0 +1,97 @@
+/*
+	Comment
+*/
+
+a { /* Comment */ color: /* Comment */ Red; }
+
+
+.TestClass {
+    color: Black;
+    background-color: White;
+    text-align: left;
+}
+
+
+li {
+    list-style: none;
+}
+
+
+.card{
+    border:2px solid black;
+    width:310px;
+    background-color: #80bfff;
+    box-shadow:10px 10px 10px grey;
+    margin:20px;
+    display: inline-block;
+    padding: 10px;
+    text-align: justify;
+    text-justify: inter-word;
+    border-radius: 25px;
+
+
+}
+
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+
+h2{
+    background-image: radial-gradient(circle, black, red, blue);
+}
+
+
+body {
+    background-color: #ff9999;
+}
+
+
+.Information {
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 3px;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+li {
+
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+li a {
+    float: left;
+    display: block;
+    padding: 8px;
+    background-color: #80bfff;
+    color: white;
+}
+
+
+li a:hover {
+    background-color: #9178B7;
+}
+
+
+
