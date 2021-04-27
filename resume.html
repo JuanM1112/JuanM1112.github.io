@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>im amazing</title>
+    <title>Resume</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body{
@@ -22,7 +22,7 @@
             position: sticky;
             top: 0;
         }
-        li {
+        nav li {
             float: left;
         }
 
@@ -66,23 +66,47 @@
             background: #dd4b39;
             color: white;
         }
+        .banner{
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/back_pic/03/51/70/585791ffa147edc.jpg');
+            padding-top: 2px;
+            padding-bottom: 2px;
+            text-align: center;
+        }
+        .banner h1{
+            font-family: 'PT Sans', sans-serif;
+            font-size: 40px;
+        }
+        main{
+            padding: 30px;
+        }
+        .certRow{
+            display: flex;
+        }
+        .certCol {
+            flex: 50%;
+        }
+        #dates{
+            list-style-type: none;
+            text-align: right;
+        }
 
     </style>
 </head>
 <body>
 <header>
-    <h1>Under Construction</h1>
-
+    <div class="banner">
+        <h1>Juan's Portfolio</h1>
+    </div>
     <nav>
         <ul class = "nav">
             <li><a href = "index.html">Home</a></li>
             <li><a  class = "active" href = "resume.html">Resume</a></li>
-            <li><a href = "portaboutme.html">About Me</a></li>
-            <li><a href = "pastwork.html">Past Work Or Something</a></li>
             <li><a href = "portfood.html">Food Page</a></li>
             <li><a href = "portsuperhero.html">Superhero Cards</a></li>
             <li><a href = "portform.html">Form</a></li>
-            <li><a href = "Content/games.html">Video Games</a></li>
+            <li><a href = "portgames.html">Video Games</a></li>
+            <li><a href = "portcalc.html">Calculator</a></li>
+            <li><a href = "portcheck.html">Checkbook</a></li>
             <li style="float:right"><a href = "contact.html">Contact Me</a></li>
         </ul>
     </nav>
@@ -91,24 +115,22 @@
         <h3>23 Olney Street, Apt 1 | Dorchester, MA 02121</h3>
         <h3>Mobile: 857-246-5362</h3>
         <a href="mailto: jmartinez139@bostonk12.org.com" class="fa fa-google"></a>
-        <a href = "mailto: jmartinez139@bostonk12.org.com"></a>
         <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
     </div>
-    <hr>
     
 </header>
 <main>
-    <!--    star thing, picture-->
-    <h1 class="left">Education</h1>
+    <hr>
+    <h1>Education</h1>
     <hr>
     <h3>Madison Park Technical Vocational High School | Boston, MA</h3>
     <h4>Class of 2021</h4>
     <h4>Vocation: Computer Programming & Web Development</h4>
-    <h1>COMPETENCIES & TECHNICAL SKILLS</h1>
-    <hr>
-    <ul class = "list">
-        <li>Code HTML5 & CSS3</li>
 
+    <h1>Competencies & Technical Skills</h1>
+    <hr>
+    <ul>
+        <li>Code HTML5 & CSS3</li>
         <li>Development of websites and pages</li>
         <li>Proficient in Python</li>
         <li>Beginner in Javascript</li>
@@ -117,34 +139,45 @@
         <li>Proficient in Google Docs</li>
         <li>Proficient in Microsoft PowerPoint</li>
     </ul>
-    <br>
-    <br>
-    <br>
     <hr>
 
-    ADDITIONAL SKILLS
-    Bilingual in English & conversational Cape Verdean Creole
+    <h1>Additional Skills</h1>
+    <ul>
+        <li>Bilingual in English & conversational Cape Verdean Creole</li>
+    </ul>
+    <hr>
 
-    CERTIFICATIONS
-    Microsoft Excel Certification                                                                                       November 2019
-    Microsoft Word Certification	                                                                               November 2019
-    Microsoft PowerPoint Certification                                                                           November 2019
+    <h1>Certifications</h1>
+    <ul class = "certRow">
+        <div class="certCol">
+            <li>Microsoft Excel Certification</li>
+            <li>Microsoft Word Certification</li>
+            <li>Microsoft Powerpoint Certification</li>
+            <li>Microsoft Excel Certification</li>
+        </div>
+        <div class="certCol" id="dates">
+            <li>November 2019
+            <li>November 2019
+            <li>November 2019
+            <li>November 2019
 
-    WORK EXPERIENCE
+        </div>
+    </ul>
+    <hr>
 
-    Square Tech Intern, Castle Square Tenants Organization 2020
-    ● Participated in educational workshops on financial literacy, resume writing and other Youth Development workshops
-    ● Participated in workshops on customer service, PC hardware, IT/Networking, and 3D printing.
-    ● Learned insert skills in order to complete describe title .
-    ● Wrote a Python program that  .
+    <h1>Work Experience</h1>
+    <h3>Square Tech Intern, Castle Square Tenants Organization | Summer 2020</h3>
+    <ul>
+        <li> Participated in educational workshops on financial literacy, resume writing and other Youth Development workshops</li>
+        <li> Participated in workshops on customer service, PC hardware, IT/Networking, and 3D printing.</li>
+    </ul>
 
-
-    Village In Progress | Boston, MA                                                                                                            June 2018 – August 2018
-    Youth Leader
-    Helped feed the elderly
-    Organized 3 neighborhood events for kids
-
-
+    <h3>Village In Progress | Boston, MA | June 2018 – August 2018</h3>
+    <ul>
+        <li>Youth Leader</li>
+        <li>Helped feed the elderly</li>
+        <li>Organized 3 neighborhood events for kids</li>
+    </ul>
 
 </main>
 <footer>
