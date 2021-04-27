@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table, th, td {
+            border: 2px solid black;
+        }
+        body{
+            background-color: white;
+        }
+    </style>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var newRow = `
+                <tr>
+                  <td>
+                       <input class="date" type="date">
+                   </td>
+                   <td>
+                       <input type="number" class="number" step="1" min="501">
+                   </td>
+                   <td>
+                       <input class="item" type="text">
+                   </td>
+
+                   <td>
+                       <input type="list" class="budgetType" list="budgetItems">
+                   </td>
+                   <td>
+                       <span class="dollar_sign">$</span><input type="number" class="cost">
+                       <button type="button" class="Save">Save</button>
+                   </td>
+                </tr>`;
+            var checkbookBody = document.querySelector("#main");
+            var ledger = [];
+            checkbookBody.addEventListener("click", function(event) {
+
+                if (event.target.matches("button")) {
+                    checkbookBody.insertAdjacentHTML('beforeend',newRow);
+                    var tableRow = event.target.parentNode.parentNode;
+                    //looks for inputs with class of date, stores it
+                    var date = tableRow.querySelector("input.date").value;
+                    var type = tableRow.querySelector("input.budgetType").value;
+                    var cost = tableRow.querySelector("input.cost").value;
+                    var item = tableRow.querySelector("input.item").value;
+                    var checkNumber = tableRow.querySelector("input.number").value;
+
+                    var ledgerLine = [];
+                    ledgerLine.push(date);
+                    ledgerLine.push(checkNumber);
+                    ledgerLine.push(item);
+                    ledgerLine.push(type);
+                    ledgerLine.push(cost);
+                    ledger.push(ledgerLine);
+
+                    var subtotal = 0.0;
+                    ledger.forEach(function(ledgerLine) {
+                        subtotal += parseFloat(ledgerLine[4]);
+                        var subtotalText = document.querySelector("input.subtotal");
+                        subtotalText.value = subtotal.toFixed(2);
+                    });
+
+                };
+
+
+            });
+
+        })
+    </script>
+</head>
+<body>
+
+<h1>Checkbook and Budget Calculator</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Check #</th>
+        <th scope="col">Item</th>
+        <th scope="col">Budget Type</th>
+        <th scope="col">Cost</th>
+    </tr>
+    </thead>
+    <tbody id="main">
+    <tr>
+        <td><input type="date" class="date">
+            <input type="submit"></td>
+        <td><input type="number" class="number" min="501"></td>
+        <td><input type="text" class="item"></td>
+        <td><input type="list" list="budgetItems" class="budgetType"></td>
+        <td><span>$</span>
+            <input type="number" class="cost" min="1">
+            <button type="button">Save</button></td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="4"></td>
+        <td><label>Subtotal</label>
+            <span>$</span>
+            <input type="number" class="subtotal">
+        </td>
+    </tr>
+    </tfoot>
+</table>
+
+<datalist id="budgetItems">
+    <option value="Housing">
+    <option value="Food">
+    <option value="Clothing">
+    <option value="Utilities">
+    <option value="Transportation">
+    <option value="Entertainment">
+    <option value="Miscellaneous">
+</datalist>
+
+</body>

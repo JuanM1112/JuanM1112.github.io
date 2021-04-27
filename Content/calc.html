@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .buttons{
+            border-style: solid;
+            border-width: 5px;
+            background-color: lightcyan;
+            padding: 20px 20px 20px 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(){
+
+            var input = document.querySelector("#input");
+            var input2 = document.querySelector("#input2");
+            var output = document.querySelector("#output");
+
+            var button = document.querySelector("#plus");
+            button.addEventListener("click",function (event) {
+                output.value = parseInt(input.value) + parseInt(input2.value);
+            })
+            var button = document.querySelector("#subtract");
+            button.addEventListener("click",function (event) {
+                output.value = parseInt(input.value) - parseInt(input2.value);
+            })
+            var button = document.querySelector("#multiply");
+            button.addEventListener("click",function (event) {
+                output.value = parseInt(input.value) * parseInt(input2.value);
+            })
+            var button = document.querySelector("#divide");
+            button.addEventListener("click",function (event) {
+                output.value = parseInt(input.value) / parseInt(input2.value);
+            })
+            var button = document.querySelector("#clear");
+            button.addEventListener("click",function (event) {
+                output.value = "";
+                input2.value = "";
+                input.value = "";
+            })
+
+        })
+
+    </script>
+</head>
+<body>
+
+<div class="buttons">
+    <h2>Calculator</h2>
+    <label for = "input">Input 1</label>
+    <input id="input" type="number">
+    <br>
+    <label for="input2">Input 2</label>
+    <input id="input2" type="number">
+    <br>
+    <input type="button" value="+" id="plus">
+    <input type="button" value="-" id="subtract">
+    <input type="button" value="*" id="multiply">
+    <input type="button" value="/" id="divide">
+    <br>
+
+    <br>
+    <input type="button" value="Clear" id="clear">
+    <br>
+    <label for = "output">Answer</label>
+    <input id="output" type="number">
+</div>
+</body>
+</html>
